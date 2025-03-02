@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Multi-Page Display</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+  <body>
+    <!-- Navigation Panel -->
+    <div id="nav">
+      <div class="nav-button">
+        <button
+          class="resaltado"
+          id="navAboutMe"
+          onclick="showPage('page1')"
+        ></button>
+      </div>
+      <div class="nav-button">
+        <button
+          class="resaltado"
+          id="navSkills"
+          onclick="showPage('page2')"
+        ></button>
+      </div>
+      <div class="nav-button">
+        <button
+          class="resaltado"
+          id="navProjects"
+          onclick="showPage('page3')"
+        ></button>
+      </div>
+      <div class="nav-button">
+        <button
+          class="resaltado"
+          id="navContact"
+          onclick="showPage('page4')"
+        ></button>
+      </div>
+      <div class="nav-button" style="margin-top: auto">
+        <button class="resaltado" id="navChangeLang" onclick="changeLanguage()">
+        </button>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div id="content">
+      <div id="page1" class="page">
+        <h1 id="page1Title"></h1>
+        <div class="retrato-container">
+          <img src="./media/portfoto.jpg" alt="Foto personal" class="retrato" />
+        </div>
+        <div class="cuadro-texto">
+          <p id="aboutMe"></p>
+          <p id="motivation"></p>
+          <p id="lookingFor"></p>
+        </div>
+        <h1 id="skillsTitle"></h1>
+        <div class="cuadro-texto">
+          <p id="education"></p>
+        </div>
+        <h1 id="experienceTitle"></h1>
+        <div class="cuadro-texto">
+          <p id="experience"></p>
+          </div>
+      </div>
+
+      <div id="page2" class="page">
+        <h1 id="page2Title"></h1>
+        <div class="cuadro-texto grid-table">
+      
+          <div class="grid-row">
+              <div class="grid-item tooltip"><img class='icon' src='./media/html.png'><span class="tooltiptext">HTML5</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/js.png'><span class="tooltiptext">Javascript</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/css-3.png'><span class="tooltiptext">Css</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/boot.png'><span class="tooltiptext">Bootstrap</span></div>
+          </div>
+      
+          <div class="grid-row">
+              <div class="grid-item tooltip"><img class='icon' src='./media/database.png'><span class="tooltiptext">MySQL</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/mongo.png'><span class="tooltiptext">MongoDB</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/python.png'><span class="tooltiptext">Python</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/django.png'><span class="tooltiptext">Django</span></div>
+          </div>
+      
+          <div class="grid-row">
+              <div class="grid-item tooltip"><img class='icon' src='./media/java.png'><span class="tooltiptext">Java</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/php.png'><span class="tooltiptext">Php</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/laravel.png'><span class="tooltiptext">Laravel</span></div>
+              <div class="grid-item tooltip"><img class='icon' src='./media/ruby.png'><span class="tooltiptext">Ruby</span></div>
+          </div>
+        </div>
+        <h1 id="langTitle"></h1>
+        <div class="cuadro-texto">
+          <h3 id="lenES"></h3>
+          <div class="w3-transparent">
+            <div class="w3-red" style="height:24px;width:100%"></div>
+          </div><br>
+          <h3 id="lenEN"></h3>
+          <div class="w3-transparent">
+            <div class="w3-blue" style="height:24px;width:100%"></div>
+          </div><br>
+          <h3 id="lenFR"></h3>
+          <div class="w3-transparent">
+            <div class="w3-pink" style="height:24px;width:35%"></div>
+          </div><br>
+          <h3 id="lenNW"></h3>
+          <div class="w3-transparent">
+            <div class="w3-light-blue" style="height:24px;width:10%"></div>
+          </div><br>
+        </div>
+      </div>
+
+      <div id="page3" class="page">
+        <h1 id="page3Title"></h1>
+        <div class="project-card">
+          <img
+            class="project-image"
+            src="./media/gestionhoteles.png"
+            alt="Proyecto 1"
+          />
+          <hr />
+          <h2 id="project1"></h2>
+        </div>
+        <div class="project-card">
+          <img
+            class="project-image"
+            src="./media/lunas.png"
+            alt="Proyecto 2"
+          />
+          <hr />
+          <h2 id="project2"></h2>
+        </div>
+      </div>
+      <div id="page4" class="page">
+        
+        <h1 id="page4Title"></h1>
+        <div class="cuadro-texto">
+          <p id="contactEmail"></p>
+          <p id="contactPhone"></p>
+          <form action="#" method="post">
+            <label for="email" id="emailLabel"></label><br />
+            <input type="email" id="email" name="email" /><br />
+            <label for="message" id="messageLabel"></label><br />
+            <textarea id="message" name="message" rows="4" cols="50"></textarea
+            ><br />
+            <input type="submit" id="botonEnviarCorreo" value="Enviar" />
+          </form>
+          <button
+            id="downloadCV"
+            onclick="window.location.href='./media/CV Personal.pdf'"
+          ></button>
+        </div>
+        <img class="iconMask" src="media/mafemmask.png" alt="icono">
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap');
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    font-family: 'Lexend', sans-serif;
+    background-image:url("media/neon-back.jpg");
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents tiling */
+    background-attachment: fixed;  /* Keeps the image fixed while scrolling */
+
+}
+
+
+
+/* Navigation panel */
+#nav {
+    width: 12.5rem; /* 200px / 16px = 12.5rem */
+    min-width: 12.5rem; /* Prevents shrinking */
+    max-width: 12.5rem; /* Prevents expansion */
+    background-color: black;
+    color: white;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.retrato-container {
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+}
+
+.retrato-container img {
+    width: 250px;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3);
+    object-fit: cover;
+}
+
+.bandera {
+    width: 120px;
+    height: 120px;
+}
+.resaltado {
+    text-shadow: 8px 5px 3px rgb(4, 17, 5);
+}
+
+#nav button {
+    width: 12.5rem;
+    min-width: 12.5rem;
+    max-width: 12.5rem;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    background: none;
+    color: rgb(62, 167, 69);
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+#nav button:hover {
+    background-color: #213321;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Spacing between buttons */
+#nav .nav-button {
+    flex: 1; /* Each button takes 20% of the nav height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* Removes additional spacing to ensure even distribution */
+}
+
+.grid-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Ensure headers take up the full row width on small screens */
+@media (max-width: 600px) {
+    .grid-row:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Content area */
+#content {
+    color: rgba(255, 255, 255, 0.767);
+    min-height: 100vh; /* Ensure content takes up at least the full height of the viewport */
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-left: 12.5rem; /* Adjusted to fit next to #nav */
+    justify-content: center;
+    align-items: flex-start; /* Center aligning vertically */
+}
+
+/* Container for each page content */
+.page {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+/* Specific page styles */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgba(250, 235, 215);
+    text-shadow: #6bbe6b 2px 2px 5px;
+}
+
+.cuadro-texto {
+    background-color: rgba(44, 44, 44, 0.75); /* Semi-transparent white background */
+    padding: 20px; /* Adds spacing inside the box */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    box-shadow: inset 2px 2px 5px #333333; /* inner shadow */
+    max-width: 80%; /* Limits the width */
+    margin: 20px auto; /* Centers the card */
+}
+
+.project-image {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.iconMask {
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+.iconGreen {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    filter: brightness(30) saturate(100%) invert(25%) sepia(80%) saturate(300%) hue-rotate(90deg);
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    width: 120px;
+    top: 80%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  }
