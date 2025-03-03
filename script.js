@@ -62,7 +62,6 @@ function updateTextToEnglish() {
   document.getElementById("page4Title").textContent = "Contact Me";
 
   document.getElementById("downloadCV").textContent = "Download CV";
-  document.getElementById("botonEnviarCorreo").value = "Send";
 }
 
 function updateTextToSpanish() {
@@ -104,7 +103,6 @@ function updateTextToSpanish() {
   document.getElementById("page4Title").textContent = "Contacta conmigo";
 
   document.getElementById("downloadCV").textContent = "Descargar CV";
-  document.getElementById("botonEnviarCorreo").value = "Enviar";
 }
 
 function copyToClipboard(texto) {
