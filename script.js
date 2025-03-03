@@ -110,10 +110,18 @@ function copyToClipboard(texto) {
   navigator.clipboard
     .writeText(textoACopiar)
     .then(() => {
-      alert(textoACopiar + " copied to clipboard!");
+      if (document.documentElement.lang === "es"){
+        alert("¡" + textoACopiar + " copiado al portapapeles!");
+      } else {
+        alert(textoACopiar + " copied to clipboard!");
+      }
     })
     .catch((err) => {
-      console.error("Failed to copy: ", err);
+      if (document.documentElement.lang === "es"){
+        console.error("Error al copiar: ", err);
+      } else {
+        console.error("Failed to copy: ", err);
+    }
     });
 }
 
